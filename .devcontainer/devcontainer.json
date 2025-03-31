@@ -1,0 +1,40 @@
+{
+  "name": "SQL Course Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bierner.markdown-mermaid",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-sqlite"
+      ],
+      "settings": {
+        "sqltools.connections": [
+          {
+            "name": "BnB Database",
+            "driver": "SQLite",
+            "database": "${workspaceFolder}/bnb/bnb.db"
+          },
+          {
+            "name": "Census Database",
+            "driver": "SQLite",
+            "database": "${workspaceFolder}/census/census.db"
+          },
+          {
+            "name": "Longlist Database",
+            "driver": "SQLite",
+            "database": "${workspaceFolder}/longlist.db"
+          },
+          {
+            "name": "Private Database",
+            "driver": "SQLite",
+            "database": "${workspaceFolder}/private/private.db"
+          }
+        ],
+        "sqltools.useNodeRuntime": true,
+        "sqltools.autoOpenSessionFiles": true
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Environment setup complete. SQL Tools and database connections configured.'"
+}
