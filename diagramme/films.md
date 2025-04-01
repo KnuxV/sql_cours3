@@ -97,4 +97,5 @@ erDiagram
     Oeuvre ||--o{ Participation : "implique"
     Participation }|--|| Personne : "concerne"
     Oeuvre |o--o{ Recompense : "peut remporter"
-    Personne |o--o{ Recompense : "peut remporter"```
+    Personne |o--o{ Recompense : "peut remporter"
+```
