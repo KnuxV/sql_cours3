@@ -6,7 +6,7 @@
 6. Pourquoi avons-nous besoin d'une table Participation séparée au lieu de créer simplement une relation directe entre Personne et Oeuvre?
 7. Comment ce modèle gère-t-il les remakes ou les adaptations d'œuvres existantes?
 8. Si nous voulions ajouter un système de recommandation basé sur les préférences des utilisateurs, quelles tables devrions-nous ajouter au modèle?
-
+```mermaid
 erDiagram
     Utilisateur {
         id INT PK
@@ -97,5 +97,4 @@ erDiagram
     Oeuvre ||--o{ Participation : "implique"
     Participation }|--|| Personne : "concerne"
     Oeuvre |o--o{ Recompense : "peut remporter"
-    Personne |o--o{ Recompense : "peut remporter"
-
+    Personne |o--o{ Recompense : "peut remporter"```
